@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Four candy tiles with fat white outlines, matching the in-game sticker look. -->
+    <path
+        android:fillColor="#FF6B6B"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M35,30 H47 A7,7 0 0 1 54,37 V49 A7,7 0 0 1 47,56 H35 A7,7 0 0 1 28,49 V37 A7,7 0 0 1 35,30 Z" />
+    <path
+        android:fillColor="#3DD9A8"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M61,30 H73 A7,7 0 0 1 80,37 V49 A7,7 0 0 1 73,56 H61 A7,7 0 0 1 54,49 V37 A7,7 0 0 1 61,30 Z" />
+    <path
+        android:fillColor="#3AA6F0"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M35,56 H47 A7,7 0 0 1 54,63 V75 A7,7 0 0 1 47,82 H35 A7,7 0 0 1 28,75 V63 A7,7 0 0 1 35,56 Z" />
+    <path
+        android:fillColor="#9B5DE5"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M61,56 H73 A7,7 0 0 1 80,63 V75 A7,7 0 0 1 73,82 H61 A7,7 0 0 1 54,75 V63 A7,7 0 0 1 61,56 Z" />
+
+</vector>

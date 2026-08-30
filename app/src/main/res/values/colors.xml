@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches SkyTop in Theme.kt so the launch window blends into the game's sky. -->
+    <color name="window_background">#FFBCE4FF</color>
+    <color name="ic_launcher_background">#FFFFC53D</color>
+</resources>

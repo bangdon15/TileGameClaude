@@ -1,0 +1,28 @@
+# Gradle and build output
+.gradle/
+build/
+
+# Kotlin incremental compilation
+.kotlin/
+
+# Machine-specific SDK location — must not be shared
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.cxx/
+.externalNativeBuild/
+
+# Signing material
+*.jks
+*.keystore
+
+# Python bytecode from tools/
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db

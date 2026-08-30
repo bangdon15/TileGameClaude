@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tile Match</string>
+    <string name="tagline">Find every matching pair!</string>
+
+    <string name="menu_play">Play</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_hint">%1$d levels · 4 × 4 up to 8 × 8</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_music">Background music</string>
+    <string name="settings_sound">Tap sounds</string>
+    <string name="settings_done">Done</string>
+
+    <string name="level_label">Level %1$d</string>
+    <string name="board_label">%1$d × %2$d</string>
+    <string name="score_label">Score</string>
+    <string name="chances_label">Hearts</string>
+    <string name="pairs_progress">%1$d / %2$d pairs</string>
+
+    <string name="memorize">👀 Look and remember!</string>
+    <string name="shuffled_look">🔀 Shuffled — look again!</string>
+    <string name="level_clear_title">Level %1$d done!</string>
+    <string name="game_over_title">Out of hearts!</string>
+    <string name="thanks_title">Thank you for playing!</string>
+    <string name="next_level">Next level</string>
+    <string name="retry_level">Try again</string>
+    <string name="new_game">New game</string>
+    <string name="play_again">Play again</string>
+    <string name="go_home">Home</string>
+
+    <string name="stat_moves">Tries</string>
+    <string name="stat_chances_left">Hearts left</string>
+    <string name="stat_chances_earned">Hearts earned</string>
+    <string name="stat_pairs_found">Pairs found</string>
+    <string name="stat_level_score">Level score</string>
+    <string name="stat_total_score">Total score</string>
+    <string name="stat_best_streak">Best streak</string>
+    <string name="stat_reached">Reached</string>
+    <string name="stat_levels_cleared">Levels cleared</string>
+
+    <string name="cd_tile_face_down">Hidden tile at row %1$d, column %2$d</string>
+    <string name="cd_tile_face_up">Revealed tile at row %1$d, column %2$d</string>
+    <string name="cd_tile_matched">Matched tile at row %1$d, column %2$d</string>
+    <string name="cd_restart">Restart level</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_quit">Quit to home screen</string>
+    <string name="cd_shuffle">Shuffle the tiles and look again</string>
+</resources>
