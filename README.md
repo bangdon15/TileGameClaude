@@ -168,3 +168,7 @@ nine sound effects and the music loop are synthesized from scratch in `tools/mak
 with Python's standard library — no licensed audio assets.
 
 
+
+## License
+
+[MIT](LICENSE) — free to read, run, fork and learn from.
