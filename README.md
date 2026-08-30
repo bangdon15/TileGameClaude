@@ -6,6 +6,10 @@ Boards start at 4 × 4 and grow every level up to 8 × 8. Every tile is a big, c
 sticker; every correct pair hands hearts back, so a good memory keeps the run alive instead
 of ending it. Six levels, then the game says thank you.
 
+> Built end to end with **Claude AI** ([Claude Code](https://claude.com/claude-code)) —
+> designed, specified and directed by me, implemented in collaboration with the agent.
+> See [Built with Claude](#built-with-claude) for how the work was actually driven.
+
 | Menu | Settings | Playing | Shuffle look | Win |
 | --- | --- | --- | --- | --- |
 | ![Menu](docs/screenshots/menu.png) | ![Settings](docs/screenshots/settings.png) | ![Playing](docs/screenshots/game.png) | ![Shuffle](docs/screenshots/shuffle.png) | ![Win](docs/screenshots/win.png) |
@@ -121,4 +125,46 @@ real delays.
 ```bash
 ./gradlew :app:testDebugUnitTest
 ```
+
+## Built with Claude
+
+This project was built with **Claude AI**, using [Claude Code](https://claude.com/claude-code)
+as an agentic coding tool in the terminal. It is here as a portfolio piece for exactly that:
+not a copy-pasted snippet, but a full Android app taken from an idea to a tested, verified
+build through directed AI collaboration.
+
+**What I brought to it.** The concept and every design decision: a 4 × 4 opening board that
+grows each level, hearts equal to three times the column count, +5 hearts per correct match
+so a strong memory extends the run, a per-level budget that grows with the board, a
+child-friendly cartoon look, and the feature set — splash, menu, two-switch sound settings,
+a shuffle that reopens the board for a ten-second look, quit-to-home, and a thank-you card
+for finishing the campaign. When the first reward model let a good player go on forever, I
+called for it and asked for the curve to be reworked.
+
+**Where I pushed back on the AI.** Directing an agent well means auditing it, not accepting
+it. Real examples from this build:
+
+- The original difficulty curve *loosened* after the board hit its 8 × 8 cap, because the
+  heart budget kept growing while the grid stood still. That became a plateau rule with a
+  test (`difficulty never loosens once the board is capped`) that fails if it regresses.
+- The memorise window was originally timed with a fixed delay, so on a slow cold start the
+  board was "memorised" before it had finished drawing. It now starts from the tile entrance
+  animation's own completion callback — a correctness fix, not a longer sleep.
+- That same fix exposed a real bug: retrying a level hung on the memorise screen, because
+  tiles were keyed on the level number and a redeal at the same level never re-animated.
+  Keying on a per-deal `dealId` fixed retry and made the shuffle's ten-second look work.
+
+**How it was verified.** Nothing here is "it compiles, ship it". The rules live in a
+`Context`-free ViewModel so they are unit-testable, and **32 JUnit tests** pin the level
+curve, the board dealer and the full state machine, with coroutine time driven by
+`kotlinx-coroutines-test`. On top of that, every screen was walked on a real emulator with
+adb automation — dumping the accessibility tree to find and tap elements, then capturing
+screenshots — which is how the shuffle look, the quit button and the win card were confirmed
+visually rather than assumed. The screenshots above came from those runs.
+
+**Constraints worked within.** The build runs `--offline` with no new dependencies, so
+navigation and the splash screen are hand-rolled instead of pulled from a library, and all
+nine sound effects and the music loop are synthesized from scratch in `tools/make_audio.py`
+with Python's standard library — no licensed audio assets.
+
 
